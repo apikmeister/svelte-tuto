@@ -1,8 +1,8 @@
 <script>
   let people = [
-    { name: "yoshi", beltColour: "black", age: 20, id: 1 },
-	{ name: "mario", beltColour: "red", age: 30, id: 2 },
-	{ name: "luigi", beltColour: "green", age: 40, id: 3 },
+    // { name: "yoshi", beltColour: "black", age: 20, id: 1 },
+	// { name: "mario", beltColour: "red", age: 30, id: 2 },
+	// { name: "luigi", beltColour: "green", age: 40, id: 3 },
   ];
 </script>
 
@@ -12,6 +12,8 @@
 			<h4>{person.name}</h4>
 			<p>{person.age} years old, {person.beltColour} belt</p>
 		</div>
+	{:else}
+		<p>There are no people to show...</p>
 	{/each}
 </main>
 
