@@ -1,31 +1,24 @@
 <script>
-  let firstName = "apik";
-  let lastName = "Nish";
-  let beltColour = "black";
-
-  $: fullName = `${firstName} ${lastName}`;
-  $: {
-    console.log(beltColour);
-    console.log(fullName);
-  }
-
-  const handleClick = () => {
-    beltColour = "red";
-  };
-
-  const handleInput = (event) => {
-    beltColour = event.target.value;
-  };
+  let people = [
+    { name: "yoshi", beltColour: "black", age: 20, id: 1 },
+	{ name: "mario", beltColour: "red", age: 30, id: 2 },
+	{ name: "luigi", beltColour: "green", age: 40, id: 3 },
+  ];
 </script>
 
 <main>
-  <!-- <h1>Hello {name}!</h1> -->
-  <p>{fullName} - {beltColour} belt</p>
-  <input type="text" bind:value={firstName} />
-  <input type="text" bind:value={lastName} />
-  <!-- <button on:click={handleClick}>update belt colour</button> -->
-  <!-- <input type="text" on:input={handleInput} value={beltColour}> -->
-  <input type="text" bind:value={beltColour} />
+	<div>
+		<h4>{people[0].name}</h4>
+		<p>{people[0].beltColour}</p>
+	</div>
+	<div>
+		<h4>{people[1].name}</h4>
+		<p>{people[1].beltColour}</p>
+	</div>
+	<div>
+		<h4>{people[2].name}</h4>
+		<p>{people[2].beltColour}</p>
+	</div>
 </main>
 
 <style>
@@ -34,13 +27,6 @@
     padding: 1em;
     max-width: 240px;
     margin: 0 auto;
-  }
-
-  h1 {
-    color: #ff3e00;
-    text-transform: uppercase;
-    font-size: 4em;
-    font-weight: 100;
   }
 
   @media (min-width: 640px) {
